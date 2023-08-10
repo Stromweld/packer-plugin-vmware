@@ -1,16 +1,16 @@
 module github.com/hashicorp/packer-plugin-vmware
 
-go 1.18
+go 1.19
 
 require (
 	github.com/google/go-cmp v0.5.9
 	github.com/hashicorp/go-getter/v2 v2.2.0
-	github.com/hashicorp/hcl/v2 v2.13.0
-	github.com/hashicorp/packer-plugin-sdk v0.4.0
+	github.com/hashicorp/hcl/v2 v2.16.2
+	github.com/hashicorp/packer-plugin-sdk v0.5.1
 	github.com/mitchellh/go-vnc v0.0.0-20150629162542-723ed9867aed
 	github.com/stretchr/testify v1.7.0
 	github.com/vmware/govmomi v0.26.0
-	github.com/zclconf/go-cty v1.10.0
+	github.com/zclconf/go-cty v1.12.1
 	golang.org/x/crypto v0.0.0-20220517005047-85d78b3ac167
 	golang.org/x/net v0.8.0
 )
@@ -99,3 +99,5 @@ require (
 	gopkg.in/yaml.v2 v2.3.0 // indirect
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
 )
+
+replace github.com/zclconf/go-cty => github.com/nywilken/go-cty v1.12.1 // added by packer-sdc fix as noted in github.com/hashicorp/packer-plugin-sdk/issues/187
